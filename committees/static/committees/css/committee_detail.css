@@ -1,0 +1,24 @@
+/* Ordered by line of first use. */
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Staff images */
+.container .row img {
+  width: 70%;
+}
+
+/* Staff descriptions */
+.container .row p {
+  text-align: left;
+}
+
+.button-row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.button-text-warning {
+  text-align: center !important;
+}

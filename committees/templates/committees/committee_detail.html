@@ -1,0 +1,79 @@
+{% extends "committees/committees.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}{{ object.abbr }}{% endblock jumbotron_title %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'committees/css/committee_detail.css' %}">
+
+  <style>.jumbotron {
+    {% if object.header %}background-image: url('{{ object.header.url }}');
+    {% else %} background-image: url('{% static 'images/default.jpg' %}');{% endif %}
+    background-position: {{ object.header_x }}% {{ object.header_y }}%;
+  }</style>
+{% endblock page_css %}
+
+{% block content %}
+  <div class="container content">
+    <h3>{{ object.name }}</h3>
+    <div class="letter-border"></div>
+    <p>
+      {{ object.description|safe }}
+    </p>
+    {% if object.topics.all %}
+      <p>
+        The topics for the {{ object.name }} for VolMUN V
+        are as follows:
+      </p>
+      <ul>
+        {% for topic in object.topics.all %}
+          <li>{{ topic.text }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <hr/>
+
+    <div class="row mx-auto button-row">
+      <div class="col text-center">
+        {% if committee.background_guide %}
+          <a class="btn btn-primary" href="{{ committee.background_guide.url }}" role="button">Background Guide</a>
+        {% else %}
+          <a class="btn btn-primary disabled" href="#" role="button" aria-disabled="true">Background Guide</a>
+        {% endif %}
+
+        {% if committee.docket %}
+          <a class="btn btn-primary" href="{{ committee.docket.url }}" role="button">Docket</a>
+        {% endif %}
+
+        {% if committee.dossier %}
+          <a class="btn btn-primary" href="{{ committee.dossier.url }}" role="button">Dossier</a>
+        {% endif %}
+
+        {% if committee.full_crisis %}
+          <a class="btn btn-primary" href="{% static 'committees/documents/SECCOCrisisGuide.pdf' %}"
+             role="button">Crisis Guide</a>
+        {% endif %}
+      </div>
+    </div>
+    <hr/>
+    {% for staffer in staff %}
+      {% if forloop.first %}
+        <div class="row mx-auto">{% endif %}
+
+    <div class="col-md-4 text-center">
+      <img src="{% if staffer.picture %}{{ staffer.picture.url }}
+                {% else %}{% static 'pages/images/default.jpg' %}{% endif %}"
+           class="img-fluid rounded-circle" alt="staff">
+      <h2 class="row text-center">{{ staffer.name }}</h2>
+      <div class="letter-border"></div>
+      <h4 class="row text-center">{{ staffer.committee_position.0 }}</h4>
+      <p>{{ staffer.bio }}</p>
+    </div>
+
+    {% if forloop.counter|divisibleby:3 %}</div>
+      <div class="row mx-auto">{% endif %}
+
+    {% if forloop.last %}</div>{% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

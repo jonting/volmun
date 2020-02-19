@@ -1,0 +1,20 @@
+/* Ordered by line of first use. */
+
+
+/* TAG SETTINGS
+   ============================= */
+
+/* Committee Links */
+h4 {
+  padding-top: 12px;
+  padding-bottom: 48px;
+}
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Jumbotron */
+.jumbotron {
+  background-position: center top;  /* Background position is centered and flush at top */
+}

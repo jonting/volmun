@@ -1,0 +1,56 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}Committees | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'committees/css/committees.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'committees/images/headers/un-flags.jpg' %}');
+  }</style>
+{% endblock page_css %}
+
+{% block jumbotron_title %}Committees{% endblock jumbotron_title %}
+
+{% block content %}
+  <div class="container content">
+    {% if full_crisis_committees %}
+      {% for committee in full_crisis_committees %}
+        <div class="row mx-auto">
+          <div class="col text-center">
+            <a href="{% url 'committees:committee_detail' committee.slug %}">
+              <img src="{% if committee.thumbnail %}{{ committee.thumbnail.url }}
+                        {% else %}{% static 'committees/images/default.jpg' %}{% endif %}"
+                   class="img-fluid" alt="{{ committee.abbr }}">
+            </a>
+
+            <h4 class="text-center">{{ committee.name }} [Full Crisis Committee]</h4>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if standard_committees %}
+      {% for committee in standard_committees %}
+        {% if forloop.first %}
+          <div class="row mx-auto">{% endif %}
+
+      <div class="col-md-4 text-center">
+        <a href="{% url 'committees:committee_detail' committee.slug %}">
+          <img src="{% if committee.thumbnail %}{{ committee.thumbnail.url }}
+                    {% else %}{% static 'committees/images/default.jpg' %}{% endif %}"
+               class="img-fluid" alt="{{ committee.abbr }}">
+        </a>
+
+        <h4 class="text-center">{{ committee.name }} ({{ committee.abbr }})</h4>
+      </div>
+
+      {% if forloop.counter|divisibleby:3 %}</div>
+        <div class="row mx-auto">{% endif %}
+
+      {% if forloop.last %}</div>{% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}
