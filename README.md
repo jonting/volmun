@@ -6,4 +6,5 @@ Primary apps include "committee", which generates all the database-stored commit
 See website in action at www.volmun.com.
 
 Relationship between database models:
+
 ![Database](/database.png)
