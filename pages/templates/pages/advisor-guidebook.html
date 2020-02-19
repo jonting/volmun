@@ -1,0 +1,23 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Advisor Guidebook{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/advisor-guidebook.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/united-nations2.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <div class="container content">
+    <p class="text-center">
+      The Advisor Guidebook holds information pertaining to the official conference schedule, our updated policies, and
+      more!
+    </p>
+    <iframe src="{% static 'pages/documents/VolMUNVAdvisorGuide.pdf' %}"></iframe>
+  </div>
+{% endblock %}

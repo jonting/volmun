@@ -1,0 +1,13 @@
+/* Ordered by line of first use. */
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Embedded PDF */
+.content iframe {
+  display: block;
+  height: 800px;
+  margin: 0 auto;
+  width: 80%;
+}

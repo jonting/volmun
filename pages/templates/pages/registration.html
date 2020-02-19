@@ -1,0 +1,41 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Registration{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/registration.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/flag.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <div class="container content">
+    <h3>VolMUN V Registration</h3>
+    <div class="letter-border"></div>
+    <p>
+      <b>VolMUN V registration is now open!</b>
+      <br/> <br/>
+      Here is a link to MUN Manager where you are able to go ahead and create an account. Additionally, you can view the
+      documents below to learn how to register for the conference and request a delegation.
+      <br/> <br/>
+    </p>
+    <p class="text-center">
+      <a href="https://modelun.co/accounts/login/">MUN Manager</a>
+    </p>
+    <div class="title-border"></div>
+    <div class="container content">
+      <div class="row mx-auto">
+        <div class="col-lg-6 text-center">
+          <iframe src="{% static 'pages/documents/MUN_Manager_Registration_Guide_v2.pdf' %}"></iframe>
+        </div>
+        <div class="col-lg-6 text-center">
+          <iframe src="{% static 'pages/documents/MUN_Manager_Requesting_Delegations_Guide_v1.pdf' %}"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

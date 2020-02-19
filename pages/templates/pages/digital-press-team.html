@@ -1,0 +1,33 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Digital Press Team{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/digital-press-team.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/paparazzi.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+
+  <div class="container content">
+    {% for staffer in staff %}
+      <div class="row bio">
+        <div class="col-md-6 text-center align-self-center">
+          <img src="{% if staffer.picture %}{{ staffer.picture.url }}
+                    {% else %}{% static 'pages/images/default.jpg' %}{% endif %}"
+               class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-6">
+          <h2 class="row text-center">{{ staffer.name }}</h2>
+          <div class="letter-border"></div>
+          <h4 class="row text-center">{{ staffer.digital_press_team_position.0 }}</h4>
+          <p>{{ staffer.bio }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

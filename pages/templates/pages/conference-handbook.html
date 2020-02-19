@@ -1,0 +1,21 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Conference Handbook{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/conference-handbook.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/map.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <div class="container content">
+    <p class="text-center">
+      The Conference Handbook holds information pertaining to the event's schedule, helpful information to know during the conference, and more!
+    </p>
+    <iframe src="{% static 'pages/documents/VolMUNVConferenceHandbook.pdf' %}"></iframe>
+  </div>
+{% endblock %}

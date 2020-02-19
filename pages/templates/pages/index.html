@@ -1,0 +1,120 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/index.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/knoxville.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block jumbotron %}
+  <!-- Header title -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <!-- Title -->
+      <h1 class="display-1 text-center">VolMUN <span id="vol">V</span></h1>
+
+      <!-- Divider -->
+      <div class="title-border"></div>
+
+      <!-- Dates -->
+      <p class="lead text-center">February 7 - February 9, 2020</p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <section class="about">
+    <div class="container">
+      <h2>Letter from the Secretary-General</h2>
+      <div class="letter-border"></div>
+      <p>
+        <img class="float-left" src="{% static 'pages/images/staff/michael-wide.jpg' %}" alt="Michael Almond"
+             title="Michael Almond"/>
+        Honorable Delegates, Advisors, and Sponsors,
+        <br/> <br/>
+        My name is Michael Almond and I am currently a 4th-year student at the University of Tennessee, Knoxville. This
+        year, I have the honor of serving as the Secretary-General for our annual high school conference,
+        Volunteer Model United Nations (VolMUN). We are incredibly excited to host the
+        5th iteration of our conference in Knoxville from February 7-9, 2020!
+        <br/> <br/>
+        Although VolMUN IV ended not too long ago, our staff has already begun drafting ideas in preparation for VolMUN
+        V!
+        As Secretary-General, my goal is to ever improve the experience for all guests of the conference. Additionally,
+        I
+        will also strive to maintain the high level of integrity that VolMUN has built as a college-preparatory
+        conference.
+        <br/> <br/>
+        Ever since VolMUN IV ended, my Secretariat and I have been working to create a memorable experience for all
+        attendees of the conference. Our goals include improving upon our past conferences and maintaining VolMUN’s high
+        level of integrity as a college-preparatory conference.
+        <br/> <br/>
+        In order to keep with our mission of striving to be a premier Southeastern high school Model UN conference, we
+        have
+        made some new additions to the conference that I am excited to share with you! These include:
+      </p>
+
+      <ul>
+        <li>Hosting VolMUN V in the brand new Student Union, allowing for all components of the conference to take place
+          in one
+          facility;
+        </li>
+
+        <li>Switching registration systems to a 3rd party platform known as “MUN Manager’ in order to streamline the
+          registration and delegate upload processes;
+        </li>
+
+        <li>Updating our conference schedule to implement a VolMUN Workshop preceding the Opening Ceremonies (to teach
+          delegates
+          the skills needed to succeed in committee) and a dedicated campus tour/Q&A Session for prospective students to
+          the
+          University of Tennessee;
+        </li>
+
+        <li>Fully revamping our website (www.volmun.com) in order to make the website more user-friendly and
+          aesthetically-pleasing;
+        </li>
+
+        <li>Creating a new Instagram page for VolMUN (@volmunutk) in order to provide more updates on the status of the
+          conference;
+        </li>
+
+        <li>Implementing a new team within the VolMUN staff known as the Digital Press Team, whose goal is to more
+          efficiently
+          and creatively document the progress of the conference.
+        </li>
+      </ul>
+
+      <p>
+        Although registration for the conference will not open for another month, I hope that you will begin getting
+        your
+        Model UN club excited for the conference in February! In the meantime, feel free to check out our website full
+        of
+        documents from last year’s conference as well as our promotional video for VolMUN V, and follow our new
+        Instagram
+        page (@volmunutk)! Additionally, if you have any questions, don’t hesitate to reach out!
+        <br/> <br/>
+        Thank you for your continued support of VolMUN, and I hope to be in contact with you soon!
+        <br/> <br/>
+        Regards,
+        <br/> <br/>
+        <b>Michael Almond</b>
+        <br/>
+        Secretary-General of VolMUN V
+        <br/>
+        682-351-7061
+        <br/>
+        <a href="mailto:secgen.volmun@gmail.com" target="_top">secgen.volmun@gmail.com</a>
+        <br/> <br/>
+      </p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block page_js %}
+  <!-- Timer script -->
+  <script src="{% static 'pages/js/timer.js' %}"></script>
+{% endblock %}

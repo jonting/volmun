@@ -1,0 +1,60 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}About VolMUN{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/volmun4.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- About VolMUN  -->
+  <div class="container content">
+    <h3>The History of VolMUN</h3>
+    <div class="letter-border"></div>
+    <p>
+      <img src="{% static 'pages/images/about-volmun1.jpg' %}"
+           style="width:52%;margin-top:0%;margin-bottom:1%;float:right;padding-left:5%;padding-right:3%;">
+      The first iteration of VolMUN began 26 years ago at the University of Tennessee as a student project. Wanting to
+      understand the diplomatic side of international politics, a group of UT students congregated together to simulate
+      sessions of the United Nations. They assigned themselves countries to represent and debated problems facing them
+      at the time. This led to the first Model UN committee held on campus. These first students wanted to share their
+      experiences with others wishing to learn.
+      <br/> <br/>
+      Soon, they expanded their organization by inviting new members to participate in their simulations. Thus, Model
+      United Nations at the University of Tennessee was born. However, it did not stop there. University of Tennessee
+      High School Model United Nations, or UTHSMUN, was created shortly after. It hoped to extend the experience to high
+      school students eager to learn about international affairs and diplomacy.
+      <br/> <br/>
+      UTHSMUN catered to local schools and sought to show the next generation of students the value of diplomatic
+      resolve and problem solving. Nevertheless, just like how geopolitical topics evolve, so did our conference.
+      UTHSMUN transformed into VolMUN to better embody the future of Model UN.
+    </p>
+    <br/>
+    <h3>VolMUN Today</h3>
+    <div class="letter-border"></div>
+    <p>
+      VolMUN implements innovations in simulated debate to help participants learn about global politics. We practice
+      new methods to develop productive discourse while appreciating
+      the differences that make us unique. VolMUN celebrates an environment of inclusion and diversity that moves
+      towards cooperation and activism. VolMUN is in its 5th iteration and
+      we can't wait to make it the best one!
+    </p>
+    <br/>
+    <div class="row mx-auto">
+      <div class="col-md-4">
+        <img src="{% static 'pages/images/about-volmun2.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'pages/images/about-volmun3.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'pages/images/about-volmun4.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Feedback{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/feedback.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/neyland.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <div class="container content">
+    <p class="text-center">
+      Please direct all VolMUN V feedback to Secretary-General Michael Almond. We welcome any and all feedback so that we can improve VolMUN for
+      everyone.
+      <br/> <br/>
+      We also welcome suggestions, in the process of preparing for VolMUN we try to anticipate every situation, however
+      we can not think of everything, so suggestions often times help us address things we have not thought of.
+      <br/> <br/>
+      Thank you, and if you have any questions about VolMUN 2019, please feel free to contact the Secretary General,
+      Michael Almond at <a href="mailto:secgen.volmun@gmail.com" target="_top">secgen.volmun@gmail.com</a>
+      <br/><br/>
+    </p>
+  </div>
+{% endblock %}

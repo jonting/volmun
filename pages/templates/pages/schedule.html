@@ -1,0 +1,120 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Schedule{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/ayres-clock.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Schedule  -->
+  <div class="container content">
+    <!-- Table -->
+    <table class="table table-striped table-bordered text-center">
+      <!-- Header Row -->
+      <thead>
+      <tr>
+        <th scope="col">Important Date</th>
+
+        <th scope="col">Event</th>
+      </tr>
+      </thead>
+
+      <!-- Dates & Events -->
+      <tbody>
+      <!-- Row 1 -->
+      <tr>
+        <th scope="row">October 11th</th>
+
+        <td>VolMUN V Committees and Staff Uploaded</td>
+      </tr>
+
+      <!-- Row 2 -->
+      <tr>
+        <th scope="row">October 15th</th>
+
+        <td>Early Bird Registration Opens</td>
+      </tr>
+
+      <!-- Row 3 -->
+      <tr>
+        <th scope="row">November 17th</th>
+
+        <td>Early Bird Registration Ends</td>
+      </tr>
+
+      <!-- Row 4 -->
+      <tr>
+        <th scope="row">November 18th</th>
+
+        <td>Normal Registration Opens</td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr>
+        <th scope="row">December 6th</th>
+
+        <td>Background Guides (excluding Security Council) and Guidebooks Uploaded</td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr>
+        <th scope="row">December 13th</th>
+
+        <td>Security Council Background Guide Uploaded</td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr>
+        <th scope="row">December 23rd</th>
+
+        <td>Security Council Dossier Uploaded</td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr>
+        <th scope="row">January 10th</th>
+
+        <td>Security Council Crisis Guide Uploaded</td>
+      </tr>
+
+      <!-- Row 6 -->
+      <tr>
+        <th scope="row">January 17th</th>
+
+        <td>Financial Assistance Requests Due</td>
+      </tr>
+
+      <!-- Row 7 -->
+      <tr>
+        <th scope="row">January 24th</th>
+
+        <td>
+          Normal Registration Ends
+          <br/>
+          Delegate Document Upload Deadline
+          <br/>
+          School and Delegate Fees Due
+        </td>
+      </tr>
+
+      <!-- Row 8 -->
+      <tr>
+        <th scope="row">January 31st</th>
+
+        <td>Committee Dockets Uploaded</td>
+      </tr>
+
+      <!-- Row 9 -->
+      <tr>
+        <th scope="row">February 7-9, 2020</th>
+
+        <td>VolMUN V!</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

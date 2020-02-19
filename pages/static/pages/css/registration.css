@@ -1,0 +1,18 @@
+/* Ordered by line of first use. */
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* MUN Manager link */
+.content a {
+  font-size: 30px;
+}
+
+/* Embedded PDF */
+iframe {
+  display: block;
+  height: 744px;
+  margin: 0 auto;
+  width: 105%;
+}

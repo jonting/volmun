@@ -1,0 +1,82 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Fees and Accommodations{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/fees-and-accommodations.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/hotel.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <div class="container content">
+    <h3>School and Delegate Fees</h3>
+    <div class="letter-border"></div>
+    <h4>School Fee</h4>
+    <p>
+      This is a one-time fee that is due within 10 days of submitting the school registration
+      form and reserving the countries your school would like to represent.
+      <br/> <br/>
+      For schools registering between October 15 - November 17, the fee is $100.
+      <br/>
+      For schools registering between November 18 - January 24, the fee is $125.
+      <br/><br/>
+      <b>One school = One school fee.</b>
+    </p>
+    <hr/>
+    <h4>Delegate Fee</h4>
+    <p>
+      This is a fee that is paid per delegate registered.
+      This payment is due January 24th and is a flat rate of <b>$65/delegate</b>.
+      The individual delegate registration form will be sent to schools once their school fee has been received.
+      <br/> <br/>
+      <b>One delegate = One delegate fee.</b>
+      <br/> <br/>
+      These fees help us in booking venues, producing conference materials, providing catered food, purchasing valuable
+      conference supplies, and much more. If you have any questions regarding fees or how they are spent, please contact
+      us and we will be glad to answer your questions!
+    </p>
+    <br/>
+    <h3>Hotel / Accommodations</h3>
+    <div class="letter-border"></div>
+    <h4>The Holiday Inn at World’s Fair Park is the official hotel of VolMUN V!</h4>
+    <p>
+      <br/>
+      Located within 5 minutes of campus and the heart of downtown Knoxville, outfitted with a full scale restaurant and
+      parking lot, this hotel is one of the finest in Knoxville!
+      <br/> <br/>
+      We have negotiated a special group rate with the Holiday Inn of <b>$103/night/room (+ taxes of 17.25%)</b>.
+      <br/> <br/>
+      We have reserved 45 double standard rooms for the nights of February 7-9 and if needed, should be able to reserve
+      more.
+      <br/> <br/>
+      <b>IMPORTANT NOTE:</b> In order to stay in our block and receive the group rate, you must reserve your rooms by
+      <b>January 12, 2020</b>.
+      <br/> <br/>
+      The hotel has also agreed to offer guests who stay in our block <b>50% off on parking.</b>
+      <br/> <br/>
+      Instructions to reserve rooms will be posted in the next few days. Please contact us if you have any questions in
+      the meantime!
+    </p>
+    <div class="text-center">
+      <div class="col-12">
+        <a target="_blank"
+           href="https://www.ihg.com/holidayinn/hotels/us/en/knoxville/tysec/hoteldetail?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki.sp.nd.ct&qChld=0&qFRA=1&qGRM=0&qGrpCd=MUN&qIta=99801505&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qSHp=1&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&icdv=99801505">
+          <img src="{% static 'pages/images/book-now.png' %}" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-12">
+        <h4>Or call <a href="tel:865.522.2800">(865) 522-2800</a> and tell the reservationist the code "MUN" to get our
+          rate!</h4>
+      </div>
+      <div class="col-12 embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube-nocookie.com/embed/HaLXA92yQog?rel=0&amp;showinfo=0" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+{% endblock %}

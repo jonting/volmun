@@ -1,0 +1,30 @@
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %}{% block jumbotron_title %}Contact Us{% endblock %} | {{ block.super }}{% endblock %}
+
+{% block page_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'pages/css/contact-us.css' %}">
+
+  <style>.jumbotron {
+    background-image: url('{% static 'pages/images/headers/student-union.jpg' %}');
+  }</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Letter from the Secretary-General  -->
+  <div class="container content">
+    <p class="text-center">
+      If you have any questions about VolMUN 2019, please feel free to contact the Secretary General.
+      <br/><br/>
+      <b>Michael Almond</b>
+      <br/>
+      Secretary-General of VolMUN V
+      <br/>
+      682-351-7061
+      <br/>
+      <a href="mailto:secgen.volmun@gmail.com" target="_top">secgen.volmun@gmail.com</a>
+      <br/> <br/>
+    </p>
+  </div>
+{% endblock %}

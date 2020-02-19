@@ -1,0 +1,35 @@
+/* Ordered by line of first use. */
+
+
+/* TAG SETTINGS
+   ============================= */
+
+/* Images */
+img {
+  margin-right: 24px;  /* Padding between SecGen picture and text */
+  width: auto;
+}
+
+
+/* ID SETTINGS
+   ============================= */
+
+/* "V" in title */
+#vol {
+  color: hsla(31, 100%, 50%, 1);  /* "V" in "VolMUN V" is orange */
+}
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Jumbotron date */
+.lead {
+  color: whitesmoke;                         /* Date font color */
+  font-size: 48px;                           /* Date font size */
+}
+
+.jumbotron {
+  background-color: hsla(31, 100%, 50%, 0.3);             /* Orange tint */
+  background-position: center top;  /* Background position is centered and flush at top */
+}

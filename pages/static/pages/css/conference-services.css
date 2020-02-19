@@ -1,0 +1,18 @@
+/* Ordered by line of first use. */
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Jumbotron */
+.jumbotron {
+  background-position: 50% 17%;
+}
+
+.bio {
+  margin-bottom: 48px;
+}
+
+.content img {
+  width: 70%;
+}
