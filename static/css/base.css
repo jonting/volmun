@@ -1,0 +1,89 @@
+/* Ordered by line of first use. */
+
+
+/* UNIVERSAL SETTINGS
+   ============================= */
+
+/* Page-wide */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* TAG SETTINGS
+   ============================= */
+
+/* Navbar */
+nav {
+  border-top-color: orange;  /* Hint of orange to top of navbar */
+  border-top-style: solid;   /* Orange bar above navbar is solid */
+  border-width: 6px;         /* Orange bar is 6px wide */
+}
+
+
+/* CLASS SETTINGS
+   ============================= */
+
+/* Alert */
+.alert {
+  margin: 0;
+}
+
+/* Navbar logo */
+.navbar-brand {
+  margin-right: 12px;  /* Padding between VolMUN and first link on navbar */
+}
+
+/* Navbar elements */
+.navbar-nav > li {
+  padding-left: 12px;   /* Padding between links on navbar */
+  padding-right: 12px;  /* Padding between links on navbar */
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-blend-mode: multiply;  /* Blend tint into background */
+  background-position: center center;  /* Background position is centered */
+  background-size: cover;           /* Background resizes to fit */
+  background-color: hsla(31, 100%, 10%, 0.5);             /* Dark tint */
+}
+
+/* Jumbotron title */
+.display-1 {
+  color: whitesmoke;                          /* Title color */
+  font-family: 'Crimson Text', serif;         /* Title font */
+  text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);  /* Text shadow behind title */
+}
+
+/* Jumbotron date */
+.lead {
+  font-family: 'Crimson Text', serif;        /* Date font */
+  text-shadow: 0 0 50px hsla(0, 0%, 0%, 1);  /* Text shadow behind date */
+}
+
+/* Jumbotron divider */
+.title-border {
+  background: hsla(31, 100%, 50%, 1);  /* Divider color */
+  display: block;                      /* Divider is block element */
+  height: 3px;                         /* Divider dimensions */
+  margin: 20px auto;                   /* Vertical margin is 20px, horizontal is automatic */
+  width: 80px;                         /* Divider dimensions */
+}
+
+/* Main Content */
+.content {
+  margin-top: 59px;
+  margin-bottom: 59px;
+}
+
+/* Letter divider */
+.letter-border {
+  background: grey;
+  display: block;
+  height: 3px;
+  margin: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 80px;
+}

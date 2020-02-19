@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block body %}
+{# Navbar #}
+<nav class="navbar navbar-expand-lg navbar-light">
+  {# Centers navbar contents #}
+  <div class="container">
+    {# Logo and home #}
+    <a class="navbar-brand" href="{% url 'pages:index' %}">VolMUN V</a>
+
+    {# Hamburger menu (mobile) #}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {# Navigation links #}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {# Conference (dropdown) #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Conference
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {# Committees #}
+            <a class="dropdown-item" href="{% url 'committees:committees' %}">Committees</a>
+
+            {# Schedule #}
+            <a class="dropdown-item" href="{% url 'pages:schedule' %}">Timetable/Schedule</a>
+
+            {# Secretariat and Staff #}
+            <a class="dropdown-item" href="{% url 'pages:about' %}">About VolMUN</a>
+          </div>
+        </li>
+
+        {# Delegates (dropdown) #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Delegates
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {# VolMUN 101 #}
+            <a class="dropdown-item" href="{% url 'pages:volmun-101' %}">VolMUN 101</a>
+
+            {# Delegate Guidebook #}
+            <a class="dropdown-item" href="{% url 'pages:delegate-guidebook' %}">Delegate Guidebook</a>
+          </div>
+        </li>
+
+        {# Advisors (dropdown) #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Advisors
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {# Registration #}
+            <a class="dropdown-item" href="{% url 'pages:registration' %}">Registration</a>
+            <div class="dropdown-divider"></div>
+
+            {# Conference Handbook #}
+            <a class="dropdown-item" href="{% url 'pages:conference-handbook' %}">Conference Handbook</a>
+
+            {# Advisor Guidebook #}
+            <a class="dropdown-item" href="{% url 'pages:advisor-guidebook' %}">Advisor Guidebook</a>
+
+            {# Fees/Hotel/Accomodations #}
+            <a class="dropdown-item" href="{% url 'pages:fees-and-accommodations' %}">Fees/Hotel/Accommodations</a>
+          </div>
+        </li>
+
+        {# Staff (dropdown) #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Staff
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {# Secretariat #}
+            <a class="dropdown-item" href="{% url 'pages:secretariat' %}">Secretariat</a>
+
+            {# Digital Press Team #}
+            <a class="dropdown-item" href="{% url 'pages:digital-press-team' %}">Digital Press Team</a>
+
+            {# Conference Services #}
+            <a class="dropdown-item" href="{% url 'pages:conference-services' %}">Conference Services</a>
+          </div>
+        </li>
+
+        {# Advisors (dropdown) #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Misc.
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {# Advisor Handbook #}
+            <a class="dropdown-item" href="{% url 'pages:feedback' %}">Feedback</a>
+
+            {# Hotel/Accomodation/Fees #}
+            <a class="dropdown-item" href="{% url 'pages:contact-us' %}">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block alert %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {% for committee in ga %}
+      <a href="{% url 'committees:committee_detail' committee.slug %}"><strong>Click here</strong></a> for General Assembly dockets!
+    {% endfor %}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{% endblock %}
+
+{% block jumbotron %}
+  {# Header title #}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      {# Title #}
+      <h1 class="display-1 text-center">{% block jumbotron_title %}Title{% endblock jumbotron_title %}</h1>
+    </div>
+  </div>
+{% endblock jumbotron %}
+
+{% block content %}
+{% endblock content %}
+
+{# Footer #}
+<footer class="page-footer font-small orange">
+  {# Footer Elements #}
+  <div class="container">
+    {# Grid row#}
+    <div class="row">
+      {# Grid column #}
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+          {# Facebook #}
+          <a class="fb-ic" href="https://www.facebook.com/utkmun/" target="_blank">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          {# Twitter #}
+          <a class="tw-ic" href="https://twitter.com/utkmun" target="_blank">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          {#Instagram#}
+          <a class="ins-ic" href="https://www.instagram.com/volmunutk/" target="_blank">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          {#Linkedin #}
+          <a class="email-ic" href="mailto:secgen.volmun@gmail.com" target="_top">
+            <i class="fa fa-envelope fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Copyright #}
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="{% url 'pages:index' %}"> VolMUN</a>
+  </div>
+</footer>
+{% endblock body %}
