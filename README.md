@@ -1,5 +1,5 @@
 # volmun
-Website made for the UTK Model UN club, made using Django and Python.
+Website made for the UTK Model UN club, made using Django, Python, and Bootstrap.
 
 Primary apps include "committee", which generates all the database-stored committee pages at www.volmun.com/committees. "Pages" holds all the static pages and the staffer models.
 
